@@ -19,7 +19,7 @@ upstream dashboard {
 server {
     listen 80 default_server;
     listen [::]:80 default_server;
-    server_name 32.188.73.145;
+    server_name 你的服务器ip;
 
     underscores_in_headers on;
     server_tokens off;
@@ -123,6 +123,10 @@ server {
 
 ## 4. 钉钉每日服务器状态推送脚本
 
+<img width="1065" height="843" alt="image" src="https://github.com/user-attachments/assets/c8bbf931-674d-411a-8eaf-a77490999184" />
+<img width="1058" height="916" alt="image" src="https://github.com/user-attachments/assets/be0be53c-b27b-4018-9e7a-e82e9ded2094" />
+<img width="1088" height="738" alt="image" src="https://github.com/user-attachments/assets/4c375055-6d40-43dc-95bb-916aca01975d" />
+
 文件位置：`/opt/nezha/daily_report.py`（配合哪吒面板「任务 → 计划任务」使用，由 Agent 代跑，不需要安装任何常驻服务）。
 
 用法：
@@ -172,9 +176,9 @@ import urllib.parse
 import urllib.request
 
 # ============================ 配置区（只改这里） ============================
-TOKEN   = "nzp_V14gIMj8MIY04IBlFwpE9q6qC1b3PplI"
-WEBHOOK = "https://oapi.dingtalk.com/robot/send?access_token=290a8023c1919fb3be4fd07d757d0945333de408632345e0d0794c5427f78297"
-SECRET  = "SEC3eb54c102cbcdc42c24b9bdd9a31b3efa7cba55d3cf2b7543c9ad64fbb78c48a"
+TOKEN   = "你的哪吒监控API：nzp_V14gIMj8MIY04IB……"
+WEBHOOK = "你的钉钉API：https://oapi.dingtalk.com/robot/send?access_token=290a8023c1919……"
+SECRET  = "你的钉钉密钥：SEC3eb54c102cbcdc42c24b9bdd9a31b3efa7cba55……"
 
 STYLE   = "markdown"            # markdown（推荐） / text（纯文本）
 SHOW_SPEED = True               # True=显示实时网速那行，False=不显示
@@ -522,8 +526,8 @@ import urllib.parse
 import urllib.request
 
 # ============================ 配置区（只改这里） ============================
-WEBHOOK = "https://oapi.dingtalk.com/robot/send?access_token=290a8023c1919fb3be4fd07d757d0945333de408632345e0d0794c5427f78297"
-SECRET  = "SEC3eb54c102cbcdc42c24b9bdd9a31b3efa7cba55d3cf2b7543c9ad64fbb78c48a"
+WEBHOOK = "你的钉钉API：https://oapi.dingtalk.com/robot/send?access_token=290a8023c1919……"
+SECRET  = "你的钉钉密钥：SEC3eb54c102cbcdc42c24b9bdd9a31b3efa7cba55……"
 
 TITLE_PREFIX = "哪吒探针"        # 关键词模式下这就是关键词，别改
 DISK_PATH = "/"                  # 统计哪块盘的用量
