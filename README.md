@@ -121,6 +121,44 @@ server {
 
 > 注意：`server_name 32.188.73.145` 需替换为你自己的服务器 IP 或域名；使用 HTTPS 时还需补充 443 监听与 SSL 证书配置。
 
+## 哪吒面板开启 TSDB
+
+### 修改 config.yaml
+
+配置文件通常在 `/opt/nezha/dashboard/data/config.yaml`（以实际安装路径为准）。
+
+找到 `tsdb: {}` 这一行，替换为：
+
+```yaml
+tsdb:
+  data_path: "data/tsdb"          # 必填，相对路径基于 data 目录
+  retention_days: 30              # 历史数据保留天数，默认 30
+  min_free_disk_space_gb: 2       # 磁盘剩余低于此值自动停写，默认 1
+  max_memory_mb: 256              # TSDB 内存缓存上限，默认 256
+  write_buffer_size: 512          # 写缓冲条数，默认 512
+  write_buffer_flush_interval: 5  # 缓冲刷盘间隔（秒），默认 5
+```
+
+> 最简写法：只保留 `data_path` 一行即可，其它走默认。
+>
+> ```yaml
+> tsdb:
+>   data_path: "data/tsdb"
+> ```
+
+### 参数速查表
+
+| 参数 | 默认值 | 说明 | 建议 |
+|------|--------|------|------|
+| `data_path` | 空 | 数据存储路径，**唯一必填项** | 小机器用 `data/tsdb` 即可 |
+| `retention_days` | 30 | 保留天数，到期自动清理 | 别贪多，30 以内 |
+| `min_free_disk_space_gb` | 1 | 剩余空间低于此值停止写入 | 小盘机器设 2 |
+| `max_memory_mb` | 256 | 内存缓存上限 | 内存 <2G 的机器降到 128 或 64 |
+| `write_buffer_size` | 512 | 写缓冲大小 | 一般不动 |
+| `write_buffer_flush_interval` | 5 | 刷盘间隔（秒） | 一般不动 |
+
+
+
 ## 4. 钉钉每日服务器状态推送脚本
 
 <img width="1065" height="843" alt="image" src="https://github.com/user-attachments/assets/c8bbf931-674d-411a-8eaf-a77490999184" />
