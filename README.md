@@ -157,6 +157,11 @@ tsdb:
 | `write_buffer_size` | 512 | 写缓冲大小 | 一般不动 |
 | `write_buffer_flush_interval` | 5 | 刷盘间隔（秒） | 一般不动 |
 
+## 哪吒面板内网穿透
+<img width="1247" height="588" alt="image" src="https://github.com/user-attachments/assets/99581a80-4bfd-41d0-a79e-6f4f7fc8d382" />
+<img width="1265" height="312" alt="image" src="https://github.com/user-attachments/assets/a75ad2dd-f2ed-4381-be58-45956d38300c" />
+<img width="1057" height="302" alt="image" src="https://github.com/user-attachments/assets/14011c58-73c7-4f84-a085-ff070c330696" />
+<img width="1259" height="196" alt="image" src="https://github.com/user-attachments/assets/6ed2668f-69d8-4890-ad38-db066202ba9b" />
 
 
 ## 4. 钉钉每日服务器状态推送脚本
