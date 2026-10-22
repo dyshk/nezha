@@ -810,3 +810,5 @@ crontab -l          # 应该看不到 standalone_report 了
 - **网速**：两次读取 `/proc/net/dev` 求差并除以 `SAMPLE_SEC`，自动跳过 `lo` 回环网卡
 - **内存**：`MemTotal - MemAvailable`（无 `MemAvailable` 时退化为 `MemFree`），与 `free` 命令口径一致
 - **磁盘**：`os.statvfs()` 计算，非 Linux 环境（如 Windows）无此接口，已用 `hasattr` 保护并返回 0/N/A 值
+
+<img width="906" height="810" alt="image" src="https://github.com/user-attachments/assets/68f13fb0-a8a3-4b91-b96d-f0dfbf8e0724" />
