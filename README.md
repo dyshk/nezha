@@ -159,9 +159,16 @@ tsdb:
 
 ## 哪吒面板内网穿透
 <img width="1247" height="588" alt="image" src="https://github.com/user-attachments/assets/99581a80-4bfd-41d0-a79e-6f4f7fc8d382" />
-<img width="1265" height="312" alt="image" src="https://github.com/user-attachments/assets/a75ad2dd-f2ed-4381-be58-45956d38300c" />
+<img width="1240" height="240" alt="image" src="https://github.com/user-attachments/assets/2e384d16-d838-444a-86b7-f19921e69826" />
 <img width="1057" height="302" alt="image" src="https://github.com/user-attachments/assets/14011c58-73c7-4f84-a085-ff070c330696" />
 <img width="1259" height="196" alt="image" src="https://github.com/user-attachments/assets/6ed2668f-69d8-4890-ad38-db066202ba9b" />
+
+
+## 哪吒面板动态域名解析
+<img width="947" height="600" alt="image" src="https://github.com/user-attachments/assets/26fd11e1-50c2-41fd-bf82-353955a7c1aa" />
+<img width="665" height="498" alt="image" src="https://github.com/user-attachments/assets/19065a0e-17df-4c7a-8c13-ea5047368dd6" />
+
+config.yml 里的 ip_report_period 默认 1800 ，agent 1800 秒就会上报并触发 DDNS 更新
 
 
 ## 4. 钉钉每日服务器状态推送脚本
